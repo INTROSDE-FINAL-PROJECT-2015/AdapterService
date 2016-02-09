@@ -20,6 +20,6 @@ public class QuotesOnDesignClient{
           JSONObject jso = arr.getJSONObject(0);
           System.out.println(jso.getString("title") + "\n " + jso.getString("content").replaceAll("\\<[^>]*>",""));
           String[] resArr = {(jso.getString("content").replaceAll("\\<[^>]*>","")).replaceAll("^&#8217;","\'"),jso.getString("title")};
-          return resArr; //Response.status(204).build();
+          return resArr;
       }
 }
